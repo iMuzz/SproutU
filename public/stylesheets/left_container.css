@@ -25,16 +25,28 @@
   width: 25%;
   max-width: 388px;
 }
+row {
+  margin: 0px;
+}
 
 .two {
+  margin: 0px;
 	width: 100%;
 }
 
 .right_wrapper {
-	width: 67%;
-	float: right;
+  width: 67%;
+  float: right;
 }
 
+div#right-wrapper {
+  width: 67%;
+  float: right;
+}
+
+.zero-pad {
+  padding: 0px;
+}
 
 .credit_score {
   display: table;
@@ -77,4 +89,16 @@
 
 .credit_change span{
    color: #A9D961;
+}
+
+#logo {
+  height: 176px;
+  width: 100%;
+}
+
+.logo-container {
+  padding: 0px;
+  position: fixed;
+  width: 25%;
+  max-width: 388px;
 }

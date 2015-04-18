@@ -2,10 +2,10 @@ extends layout
 
 block content
 	.container
-		.row
-			.col-md-6 
-				h1 Logo
-			.col-md-6
+		.row.two
+			.logo-container 
+				img#logo(src="images/SprouTu.png")
+			#right-wrapper
 				h4: i Welcome Julia!
 				.summary-data
 					.category
@@ -27,7 +27,7 @@ block content
 						.credit_score.credit_change: span +12
 					video#my-video(src="/videos/tree.mp4")
 			.right_wrapper.clearfix
-				.col-md-12
+				.col-md-12.zero-pad
 					h4 Your Personalized Dashboard
 					.dashboard
 						.tabgroup
@@ -87,7 +87,7 @@ block content
 							.dash-content4
 							.dash-content5
 				//- .content
-				.col-md-12
+				.col-md-12.zero-pad
 					br
 					h4 Growth Plan
 					.growth-plan
@@ -144,7 +144,7 @@ block content
 									p By paying off all credit card balances, you can increase your score by 35 points.
 
 
-				.col-md-12
+				.col-md-12.zero-pad
 					br
 					h4 Your timeline
 					.your-timeline
