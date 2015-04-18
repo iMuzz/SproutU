@@ -13,7 +13,10 @@
 }
 
 #my-video {
-	width: 98%;
+  border-top-color: #0295be;
+  border-top-width:  6px;
+  border-top-style: solid; 
+	width: 100%;
 }
 
 .tree_wrapper {
@@ -37,15 +40,18 @@
   height: 110px;
   background: #fcd800;
   color: #fff;
-  margin-bottom: 40px;
   float: left;
+}
+
+.credit_info {
+  background-color: #0295be;
 }
 
 .credit_score span {
   display: table-cell;
   vertical-align: middle;
   text-align: center;
-  font-size: 30px;
+  font-size: 40px;
 }
 
 .credit_score {
@@ -53,7 +59,16 @@
 	width: 60%
 }
 
+#score {
+   border-right-color: #0295be;
+  border-right-width:  3px;
+  border-right-style: solid; 
+}
+
 .credit_change {
+ border-left-color: #0295be;
+  border-left-width:  3px;
+  border-left-style: solid; 
   background: white;
 	float: right;
 	width: 40%
