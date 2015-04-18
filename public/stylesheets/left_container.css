@@ -13,6 +13,7 @@
 }
 
 #my-video {
+  padding-top: 60px;
   border-top-color: #0295be;
   border-top-width:  6px;
   border-top-style: solid; 
