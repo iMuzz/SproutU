@@ -1,0 +1,32 @@
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+ 
+.clearfix:after {
+  clear: both;
+}
+ 
+.clearfix {
+  zoom: 1; /* ie 6/7 */
+}
+
+#my-video {
+	width: 98%;
+}
+
+.tree_wrapper {
+  position: fixed;
+  width: 30%;
+  max-width: 388px;
+}
+
+.two {
+	width: 100%;
+}
+
+.right_wrapper {
+	width: 60%;
+	float: right;
+}
