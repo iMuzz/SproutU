@@ -18,7 +18,7 @@
 
 .tree_wrapper {
   position: fixed;
-  width: 30%;
+  width: 25%;
   max-width: 388px;
 }
 
@@ -27,6 +27,6 @@
 }
 
 .right_wrapper {
-	width: 60%;
+	width: 67%;
 	float: right;
 }
