@@ -18,6 +18,8 @@
 
 
 
+
+
 body {
 	padding: 50px;
 	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
@@ -30,6 +32,15 @@ body {
 .container {
 	min-width: 290px;
 }
+
+// Summary
+.summary-data {
+	height: 100px;
+	background: #fff;
+}
+
+
+
 
 .credit_score {
 	display: table;
@@ -55,14 +66,19 @@ body {
 }
 
 .dashboard {
-	height: 400px;
+	// height: 400px;
 }
 
 .tabgroup {
+
 	height: 60px;
+	color: @black;
+
 }
 
-.tab {
+.tab1, .tab2, .tab3, .tab4, .tab5 {
+	display: table;
+
 	height: 100%;
 
 	width: 19.5%;
@@ -75,15 +91,64 @@ body {
 	background: #fff;
 	float: left;
 
+	text-indent: 8px;
+
 	cursor: pointer;
+
+	span {
+		height: 60px;
+		display: table-cell;
+		vertical-align: middle;
+	}
+	&.active span {
+		height: 64px;
+	}
 }
+
+.content-group {
+	height: 260px;
+	color: @black;
+}
+
+.dash-content1, .dash-content2, .dash-content3, .dash-content4, .dash-content5 {
+	display: none;
+
+	height: 100%;
+	width: 19.5%;
+	margin-left: .625%;
+
+	float: left;
+	background: white;
+
+	&:first-child {
+		margin-left: 0;
+	}
+
+	&.active {
+		display: table;
+
+		width: 100%;
+		margin-left: 0;
+	}
+
+}
+
 
 .content {
 	height: 340px;
 	background: #fff;
-
 }
 
+.growth-plan {
+	height: 400px;
+	background: @white;
+}
+
+
+.your-timeline {
+	height: 400px;
+	background: @white;
+}
 
 
 
