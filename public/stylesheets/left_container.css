@@ -30,3 +30,35 @@
 	width: 67%;
 	float: right;
 }
+
+
+.credit_score {
+  display: table;
+  height: 110px;
+  background: #fcd800;
+  color: #fff;
+  margin-bottom: 40px;
+  float: left;
+}
+
+.credit_score span {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 30px;
+}
+
+.credit_score {
+	float: left;
+	width: 60%
+}
+
+.credit_change {
+  background: white;
+	float: right;
+	width: 40%
+}
+
+.credit_change span{
+   color: #A9D961;
+}
