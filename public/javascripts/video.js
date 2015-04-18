@@ -1,6 +1,16 @@
 $( document ).ready(function() {
   addEndAttributeTime(2);
   playVideoToPercentage(.25); // pass in video percentage
+
+  // $('#bottom').
+//   $( window ).resize(function(event) {
+//    $("#botttom").width() * .25
+//    console.log($("#botttom").width() * .25);
+//    // debugger
+//     $(".tree_wrapper").attr({
+//       style: 'width: '+ $("#botttom").width() * .25 +'px',
+//     });
+//   });
 });
 
 

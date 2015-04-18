@@ -12,6 +12,12 @@
   zoom: 1; /* ie 6/7 */
 }
 
+.vcenter {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 #my-video {
   padding-top: 60px;
   border-top-color: #0295be;
@@ -23,7 +29,7 @@
 .tree_wrapper {
   position: fixed;
   width: 25%;
-  max-width: 388px;
+  max-width: 350px;
 }
 row {
   margin: 0px;
@@ -49,7 +55,7 @@ div#right-wrapper {
 }
 
 .credit_score {
-  display: table;
+  display: block;
   height: 110px;
   background: #fcd800;
   color: #fff;
@@ -61,10 +67,10 @@ div#right-wrapper {
 }
 
 .credit_score span {
-  display: table-cell;
+  display: block;
   vertical-align: middle;
   text-align: center;
-  font-size: 40px;
+  font-size: 200%;
 }
 
 .credit_score {
@@ -73,12 +79,14 @@ div#right-wrapper {
 }
 
 #score {
-   border-right-color: #0295be;
+  box-sizing: border-box;
+  border-right-color: #0295be;
   border-right-width:  3px;
   border-right-style: solid; 
 }
 
 .credit_change {
+  box-sizing: border-box;
  border-left-color: #0295be;
   border-left-width:  3px;
   border-left-style: solid; 
@@ -94,6 +102,7 @@ div#right-wrapper {
 #logo {
   height: 176px;
   width: 100%;
+  max-width: 350px;
 }
 
 .logo-container {
@@ -101,4 +110,12 @@ div#right-wrapper {
   position: fixed;
   width: 25%;
   max-width: 388px;
+}
+
+#botttom {
+  position: relative;
+}
+
+@media (max-width: 895px) {
+  
 }
