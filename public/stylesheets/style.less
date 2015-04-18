@@ -96,7 +96,6 @@ body {
 
 .tabgroup {
 
-	height: 60px;
 	color: @black;
 
 }
@@ -122,7 +121,7 @@ body {
 	cursor: pointer;
 
 	span {
-		height: 60px;
+		height: 45px;
 		display: table-cell;
 		vertical-align: middle;
 
@@ -131,7 +130,7 @@ body {
 		}
 	}
 	&.active span {
-		height: 64px;
+		height: 49px;
 		color: @tu-blue;
 
 		&:first-child {
@@ -145,8 +144,8 @@ body {
 	&:before {
 		font-size: 34px;
 		position: absolute;
-		right: 3px;
-		top: 19px;
+		right: 1px;
+		top: 12px;
 	}
 }
 
@@ -191,6 +190,25 @@ body {
 	width: 120px;
 }
 
+.details-button {
+	position: absolute;
+	bottom: -5px;
+
+	left: 10%;
+	width: 80%;
+	height: 20px;
+
+	color: white;
+	text-align: center;
+
+	&.orange {
+		background: @tu-orange;
+	}
+	&.green {
+		background: @tu-green;
+	}
+}
+
 
 .content {
 	height: 340px;
@@ -198,7 +216,6 @@ body {
 }
 
 .growth-plan {
-	height: 400px;
 	background: @white;
 	color: @black;
 
@@ -208,6 +225,86 @@ body {
 	h2 {
 		margin: 0;
 	}
+}
+
+.growth-option {
+	padding-top: 100%;
+	cursor: pointer;
+
+	&.green {
+		background: @tu-green;
+
+		&:hover {
+			background: @tu-green-web;
+		}
+	}
+	&.yellow {
+		background: @tu-yellow;
+
+		&:hover {
+			background: @tu-yellow--hover
+		}
+	}
+	&.orange {
+		background: @tu-orange;
+
+		&:hover {
+			background: @tu-orange-web;
+		}
+	}
+	&.blue {
+		background: @tu-blue;
+
+		&:hover {
+			background: @tu-blue--hover;
+		}
+	}
+
+	.CRATE {
+		position: absolute;
+		bottom: 0;
+		color: white;
+
+		p {
+			margin: 3px 5px;
+		}
+	}
+}
+
+.toggle {
+	display: none;
+}
+
+.info-alert {
+	display: table;
+
+	position: relative;
+	height: 50px;
+
+	width: 100%;
+
+	border: 1px solid @tu-orange;
+	border-top-width: 0;
+	border-right-width: 0;
+
+	p {
+		display: table-cell;
+		vertical-align: middle;
+	}
+
+	.icon-credit-card {
+		display: table-cell;
+		vertical-align: middle;
+
+		padding-top: 11px;
+		padding-left: 10px;
+
+		&:before {
+			font-size: 45px;
+			color: @tu-orange;
+		}
+	}
+
 }
 
 

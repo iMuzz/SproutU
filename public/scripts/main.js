@@ -53,5 +53,12 @@ $(document).ready(function(){
 		$('.tab5').addClass('active');
 	});
 
+	$('.click-target').click(function(){
+		$('.toggle').slideToggle();
+	});
 
 });
+
+
+
+
