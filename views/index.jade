@@ -3,10 +3,20 @@ extends layout
 block content
 	.container
 		.row
-			.col-md-6 Logo
+			.col-md-6 
+				h1 Logo
 			.col-md-6
-				h4 Welcome Julia!
+				h4: i Welcome Julia!
 				.summary-data
+					.category
+						p Open Accounts
+						h4 2
+					.category
+						p Payments
+						h4 3
+					.category
+						p Inquiries
+						h4 1
 		br
 		.row
 			.col-md-4
@@ -17,13 +27,44 @@ block content
 				h4 Your Personalized Dashboard
 				.dashboard
 					.tabgroup
-						.tab1.active: span Credit Cards
-						.tab2: span Home Loans
-						.tab3: span Business Loans
-						.tab4: span Personal Loans
-						.tab5: span Student Loans
+						.tab1.active
+							span Credit Cards
+							span.icon-optimization.hidden-md
+						.tab2
+							span Home Loans
+							span.icon-optimization.hidden-md
+						.tab3
+							span Business Loans
+							span.icon-optimization.hidden-md
+						.tab4
+							span Personal Loans
+							span.icon-optimization.hidden-md
+						.tab5
+							span Student Loans
+							span.icon-optimization.hidden-md
 					.content-group
 						.dash-content1.active
+							.col-md-3
+
+							.col-md-3
+								.credit-card-wrapper
+									img.credit-card(src='media/Chase-British-Airways-Visa-Credit-Card.jpg')
+									p British Airways
+									p Ending in 9112
+									p Balance:
+									p Balance Date:
+									p Monthly Payment:
+									p Term:
+							.col-md-3
+								.credit-card-wrapper
+									img.credit-card(src='media/citibusiness-world-mastercard-credit-card1.jpg')
+									p CitiBusiness World
+									p Ending in 6789
+									p Balance:
+									p Balance Date:
+									p Monthly Payment:
+									p Term:
+							.col-md-3
 						.dash-content2
 						.dash-content3
 						.dash-content4
@@ -34,6 +75,7 @@ block content
 				br
 				h4 Growth Plan
 				.growth-plan
+					h2 689-690 Projected Credit Score
 			.col-md-4
 			.col-md-8
 				br

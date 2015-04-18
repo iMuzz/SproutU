@@ -15,10 +15,22 @@
 @tu-yellow--hover: #E0C000;
 
 // Expanded Palette
+@tu-red: #E14025;
+@tu-red-web: #D74025;
+
+@tu-green: #A9D161;
+@tu-green-web: #008A00;
+
+@tu-orange: #F17123;
+@tu-orange-web: #F16E00;
+
+// @light-gray: 
 
 
-
-
+.fixed-crate {
+	position: fixed;
+	width: 380px;
+}
 
 body {
 	padding: 50px;
@@ -37,6 +49,19 @@ body {
 .summary-data {
 	height: 100px;
 	background: #fff;
+	color: @black;
+
+	.category {
+		position: relative;
+
+		box-sizing: border-box;
+
+		padding-top: 8px;
+		width: 30%;
+		float: left;
+
+		text-align: center;
+	}
 }
 
 
@@ -78,6 +103,7 @@ body {
 
 .tab1, .tab2, .tab3, .tab4, .tab5 {
 	display: table;
+	color: @tu-orange;
 
 	height: 100%;
 
@@ -99,9 +125,28 @@ body {
 		height: 60px;
 		display: table-cell;
 		vertical-align: middle;
+
+		&:first-child {
+			color: black;
+		}
 	}
 	&.active span {
 		height: 64px;
+		color: @tu-blue;
+
+		&:first-child {
+			color: black;
+		}
+	}
+}
+.icon-optimization {
+	position: relative;
+
+	&:before {
+		font-size: 34px;
+		position: absolute;
+		right: 3px;
+		top: 19px;
 	}
 }
 
@@ -133,6 +178,19 @@ body {
 
 }
 
+.credit-card-wrapper {
+	box-sizing: border-box;
+	padding: 18px 0;
+
+	p {
+		margin: 3px;
+	}
+}
+
+.credit-card {
+	width: 120px;
+}
+
 
 .content {
 	height: 340px;
@@ -142,12 +200,19 @@ body {
 .growth-plan {
 	height: 400px;
 	background: @white;
+	color: @black;
+
+	box-sizing: border-box;
+	margin: 0;
+	padding: 12px;
 }
 
 
 .your-timeline {
 	height: 400px;
 	background: @white;
+
+
 }
 
 
