@@ -158,14 +158,17 @@ div#right-wrapper {
 
 .icon-load-wheel:after {
   content: '700';
+  font-weight: bold;
   font-size: 24px;
-
+  color: #0295be;;
   position: absolute;
   top: 33px;
   right: 39px;
 }
 
-
+#loan-balance:before {
+  content: '$';
+}
 
 
 
