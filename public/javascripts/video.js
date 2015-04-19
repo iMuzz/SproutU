@@ -1,11 +1,12 @@
 $( document ).ready(function() {
   addEndAttributeTime(2);
   playVideoToPercentage(.25); // pass in video percentage
-  startCount(649, 12);
+  startCount();
 });
 
 function startCount(end_score, end_change){
-
+  var end_score = end_score || 649;
+  var end_change = end_change || 12;
   // 4.09
   // 1.47
 
