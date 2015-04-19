@@ -2,7 +2,21 @@ $( document ).ready(function() {
   addEndAttributeTime(2);
   playVideoToPercentage(.25); // pass in video percentage
   startCount();
+  decreaseBalance();
 });
+function decreaseBalance(){
+    var options = {
+    useEasing : true, 
+    useGrouping : true, 
+    separator : ',', 
+    decimal : '.', 
+    prefix : '', 
+    suffix : '' 
+  };
+
+  var loan = new countUp("loan-balance", 23896, 19852, 0, 7, options);
+  loan.start();
+};
 
 function startCount(end_score, end_change){
   var end_score = end_score || 649;
