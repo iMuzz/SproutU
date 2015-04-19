@@ -165,7 +165,9 @@ div#right-wrapper {
   right: 39px;
 }
 
-
+#loan-balance:before {
+  content: '$';
+}
 
 
 
