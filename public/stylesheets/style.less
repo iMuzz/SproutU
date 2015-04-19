@@ -171,12 +171,18 @@ body {
 }
 
 .credit-card-wrapper {
+	position: relative;
 	box-sizing: border-box;
 
 	margin: 0 auto;
+	height: 200px;
 
 	p {
 		margin: 3px;
+	}
+
+	h4:first-child {
+		height: 40px;
 	}
 }
 
@@ -185,11 +191,12 @@ body {
 }
 
 .details-button {
-	position: relative;
+	position: absolute;
 	bottom: -5px;
 
 	width: 100%;
 
+	box-sizing: border-box;
 	padding: 4px;
 
 	color: white;
