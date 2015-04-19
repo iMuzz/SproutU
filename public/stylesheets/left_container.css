@@ -130,6 +130,10 @@ div#right-wrapper {
   position: relative;
 }
 
+#score_ {
+  color: black
+}
+
 @media (max-width: 895px) {
   
 }
