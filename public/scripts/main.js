@@ -55,9 +55,9 @@ $(document).ready(function(){
 
 	$('.click-target').click(function(){
 		$('.toggle').slideToggle();
-		playVideoToPercentage(.5);
+		playVideoToPercentage(.8);
+		startCount(685, 35);
 	});
-
 
 });
 
