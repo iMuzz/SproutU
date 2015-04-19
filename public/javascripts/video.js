@@ -1,20 +1,15 @@
 $( document ).ready(function() {
   addEndAttributeTime(2);
   playVideoToPercentage(.25); // pass in video percentage
-  startCount();
-
-  // $('#bottom').
-//   $( window ).resize(function(event) {
-//    $("#botttom").width() * .25
-//    console.log($("#botttom").width() * .25);
-//    // debugger
-//     $(".tree_wrapper").attr({
-//       style: 'width: '+ $("#botttom").width() * .25 +'px',
-//     });
-//   });
+  startCount(649, 12);
 });
 
-function startCount(){
+function startCount(end_score, end_change){
+
+  // 4.09
+  // 1.47
+
+  // = 2.62
   var options = {
     useEasing : true, 
     useGrouping : true, 
@@ -24,8 +19,10 @@ function startCount(){
     suffix : '' 
   };
 
-  var cred_score = new countUp("cscore", 0, 649, 0, 7, options);
-  var cred_change = new countUp("csinc", 0, 12, 0, 7, options);
+  var curr_score = $('#cscore').text();
+  var csinc = $('#csinc').text();
+  var cred_score = new countUp("cscore", curr_score, end_score, 0, 7, options);
+  var cred_change = new countUp("csinc", csinc, end_change, 0, 7, options);
   cred_score.start();
   cred_change.start();
 };
