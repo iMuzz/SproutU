@@ -4,6 +4,10 @@
     src: url(fonts/Intro/sansation_light.woff);
 }
 
+h4 {
+	margin-bottom: 3px;
+}
+
 // Standard Palette
 @white: #fff;
 @black: #000;
@@ -34,7 +38,7 @@
 
 body {
 	padding: 50px;
-	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+	font: 14px myFirstFont, Helvetica, Arial, sans-serif;
 	background: #0295BE;
 	color: @white;
 
@@ -72,6 +76,7 @@ body {
 }
 
 .tree {
+	position: relative;
 	height: 600px;
 	background: #fff;
 }
@@ -183,8 +188,7 @@ body {
 	position: relative;
 	bottom: -5px;
 
-	left: 10%;
-	width: 80%;
+	width: 100%;
 
 	padding: 4px;
 
@@ -296,7 +300,11 @@ body {
 			color: @tu-orange;
 		}
 	}
+}
 
+.your-planner {
+	background: @white;
+	padding: 32px 38px;
 }
 
 
@@ -309,6 +317,11 @@ body {
 	}
 }
 
+#csinc {
+	&:before {
+		content: '+';
+	}
+}
 
 
 
