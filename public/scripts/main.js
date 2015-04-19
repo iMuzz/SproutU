@@ -55,7 +55,9 @@ $(document).ready(function(){
 
 	$('.click-target').click(function(){
 		$('.toggle').slideToggle();
+		playVideoToPercentage(.5);
 	});
+
 
 });
 

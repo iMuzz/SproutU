@@ -21,7 +21,7 @@
 #my-video {
   padding-top: 60px;
   border-top-color: #0295be;
-  border-top-width:  6px;
+  border-top-width:  9px;
   border-top-style: solid; 
 	width: 100%;
 }
@@ -56,7 +56,7 @@ div#right-wrapper {
 
 .credit_score {
   display: block;
-  height: 110px;
+  height: 70px;
   background: #fcd800;
   color: #fff;
   float: left;
@@ -69,8 +69,8 @@ div#right-wrapper {
 .credit_score span {
   display: block;
   vertical-align: middle;
-  text-align: center;
-  font-size: 200%;
+  text-indent: 11px;
+  font-size: 300%;
 }
 
 .credit_score {
@@ -85,6 +85,11 @@ div#right-wrapper {
   border-right-style: solid; 
 }
 
+#score .vcenter {
+  font-size: 390%;
+  top: 55%;
+}
+
 .credit_change {
   box-sizing: border-box;
  border-left-color: #0295be;
@@ -92,11 +97,19 @@ div#right-wrapper {
   border-left-style: solid; 
   background: white;
 	float: right;
-	width: 40%
+	width: 39%;
+  position: relative;
 }
 
 .credit_change span{
    color: #A9D961;
+}
+
+.credit_score .last-credit-check {
+  position: absolute;
+  bottom: 3px;
+  color: black;
+  font-size: 100%;
 }
 
 #logo {
@@ -110,6 +123,7 @@ div#right-wrapper {
   position: fixed;
   width: 25%;
   max-width: 388px;
+  top: 20px;
 }
 
 #botttom {
@@ -119,3 +133,20 @@ div#right-wrapper {
 @media (max-width: 895px) {
   
 }
+
+.goals-overlay {
+  position: absolute;
+  top: 78px;
+  left: 8px;
+
+  color: #0295BE;
+}
+.goals-overlay h4 {
+
+}
+
+
+
+
+
+
