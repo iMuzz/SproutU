@@ -1,6 +1,7 @@
 $( document ).ready(function() {
   addEndAttributeTime(2);
   playVideoToPercentage(.25); // pass in video percentage
+  startCount();
 
   // $('#bottom').
 //   $( window ).resize(function(event) {
@@ -13,6 +14,21 @@ $( document ).ready(function() {
 //   });
 });
 
+function startCount(){
+  var options = {
+    useEasing : true, 
+    useGrouping : true, 
+    separator : ',', 
+    decimal : '.', 
+    prefix : '', 
+    suffix : '' 
+  };
+
+  var cred_score = new countUp("cscore", 0, 649, 0, 7, options);
+  var cred_change = new countUp("csinc", 0, 12, 0, 7, options);
+  cred_score.start();
+  cred_change.start();
+};
 
 function playVideoToPercentage(percentage) {
     addEndAttributeTime(5 * percentage)    // stop at 4 seconds
