@@ -18,7 +18,7 @@ function playVideoToPercentage(percentage) {
     addEndAttributeTime(5 * percentage)    // stop at 4 seconds
     var video = document.getElementById("my-video");
     var starttime = video.currentTime;  // start at 2 seconds
-    video.defaultPlaybackRate = 1;
+    video.defaultPlaybackRate = .5;
 
     //handler should be bound first
     video.addEventListener("timeupdate", pauseAtTime);
