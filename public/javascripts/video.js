@@ -7,7 +7,6 @@ $( document ).ready(function() {
   var video = new VideoWrap({id: "my-video", playbackRate: .5});
   video.resumeToPercentage(.15);
 
-  debugger
 });
 
 function VideoWrap (object) {
