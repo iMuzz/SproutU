@@ -29,9 +29,9 @@ function VideoWrap (object) {
       this.video.pause ();
     };
 
-    this.resumeToPercentage = function(percentage){  //this could accept object to change playback rate
+    this.resumeToPercentage = function(percentage){  
       var startTime = this.video.currentTime;                         //set video start time to current start time
-      $(this.video).attr('data-end-time', (5 * percentage));          //set where the video should end    
+      $(this.video).attr('data-end-time', (this.video.duration * percentage));          //set where the video should end    
       this.video.addEventListener("timeupdate", this.pauseAtTime);    //make video stop at certain time
 
       this.video.play();
