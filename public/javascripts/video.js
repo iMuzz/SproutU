@@ -1,11 +1,11 @@
 $( document ).ready(function() {
-  addEndAttributeTime(2);
-  playVideoToPercentage(.15); // pass in video percentage
+  // addEndAttributeTime(2);
+  // playVideoToPercentage(.15); // pass in video percentage
   startCount();
   decreaseBalance();
 
-
   var video = new VideoPlayer({id: "my-video"});
+  video.resumeToPercentage(.15);
 });
 
 function VideoPlayer (object) {
@@ -25,17 +25,18 @@ function VideoPlayer (object) {
     this.playbackRate = object["playbackRate"] || 1;
 
     // play
+    this.play = function () {
+      this.video.play();
+    };
 
     // pause now
-
-    // pause at time
-
-    // start
-
+    this.pause = function () {
+      this.video.pause ();
+    };
 
     this.resumeToPercentage = function(percentage){  //this could accept object to change playback rate
       var startTime = this.video.currentTime;                         //set video start time to current start time
-      $(video).attr('data-end-time', (5 * percentage));               //set where the video should end    
+      $(this.video).attr('data-end-time', (5 * percentage));          //set where the video should end    
       this.video.addEventListener("timeupdate", this.pauseAtTime);    //make video stop at certain time
 
       // this.video.load();
@@ -49,8 +50,9 @@ function VideoPlayer (object) {
       }
     };
 
+    // pause at time
     this.pauseAtTime = function pauseAtATime() {
-      var endTime = $(video).attr('data-end-time');             // get video end time
+      var endTime = $(this).attr('data-end-time');             // get video end time
       
       if (this.currentTime >= endTime) {                        // stop video and remove listener when video reaches end time
         this.pause();
