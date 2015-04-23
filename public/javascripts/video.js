@@ -60,6 +60,21 @@ function VideoWrap (object) {
       // This gets run everytime a new object is created.
     };
     this.init();
+
+    this.rewind = function() {
+      var video = this.video;
+      var currTime = this.video.currentTime * 100 | 0;
+      function frame() {
+        currTime-=5;
+        video.currentTime = currTime / 100;
+        console.log(video.currentTime)
+
+        if (currTime <= 0)  // check finish condition
+          clearInterval(id)
+      };
+
+      var id = setInterval(frame, 50) // draw every 10ms
+    };
 };
 
 function playVideoToPercentage(percentage) {
@@ -140,4 +155,15 @@ function startCount(end_score, end_change){
   cred_change.start();
 };
 
+function rewind() {
+  var left = 0
+ 
+  function frame() {
+    left++  // update parameters
+    console.log(left)
 
+    if (left == 100)  // check finish condition
+      clearInterval(id)
+  }
+  var id = setInterval(frame, 25) // draw every 10ms
+}
