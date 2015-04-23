@@ -73,7 +73,7 @@ function VideoWrap (object) {
           clearInterval(id)
       };
 
-      var id = setInterval(frame, 50) // draw every 10ms
+      var id = setInterval(frame, 50) // draw every 50ms
     };
 };
 
