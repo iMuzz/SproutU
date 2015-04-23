@@ -2,7 +2,7 @@ $( document ).ready(function() {
   addEndAttributeTime(2);
   playVideoToPercentage(.25); // pass in video percentage
   startCount();
-  decreaseBalance();23895
+  decreaseBalance();
 });
 function decreaseBalance(){
     var options = {
