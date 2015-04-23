@@ -4,17 +4,13 @@ $( document ).ready(function() {
   startCount();
   decreaseBalance();
 
-  var video = new VideoPlayer({id: "my-video"});
+  var video = new VideoWrap({id: "my-video", playbackRate: .5});
   video.resumeToPercentage(.15);
+
+  debugger
 });
 
-function VideoPlayer (object) {
-
-    this.init = function() {
-      // This gets run everytime a new object is created.
-    };
-    this.init();
-
+function VideoWrap (object) {
 
     this.video = document.getElementById(object["id"]);
 
@@ -22,7 +18,7 @@ function VideoPlayer (object) {
     
     this.startTime = object["startTime"] || 0 ;
 
-    this.playbackRate = object["playbackRate"] || 1;
+    this.video.playbackRate = object["playbackRate"] || 1;
 
     // play
     this.play = function () {
@@ -39,15 +35,11 @@ function VideoPlayer (object) {
       $(this.video).attr('data-end-time', (5 * percentage));          //set where the video should end    
       this.video.addEventListener("timeupdate", this.pauseAtTime);    //make video stop at certain time
 
-      // this.video.load();
-
       this.video.play();
 
       try {
         video.currentTime = starttime;
-      } catch (ex) {
-          //handle exceptions here
-      }
+      } catch (ex) {}
     };
 
     // pause at time
@@ -64,6 +56,11 @@ function VideoPlayer (object) {
       var video = this.video;
       return parseFloat($(video).attr('data-end-time'));
     };
+    
+    this.init = function() {
+      // This gets run everytime a new object is created.
+    };
+    this.init();
 };
 
 function playVideoToPercentage(percentage) {
