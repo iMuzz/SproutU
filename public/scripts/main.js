@@ -56,7 +56,7 @@ $(document).ready(function(){
 	$('.click-target').click(function(){
 		$('.toggle').slideToggle();
 		var video = new VideoWrap({id: "my-video"});
-		video.resumeToPercentage(.8);
+		video.resumeToPercentage(.6);
 		startCount(685, 35);
 	});
 

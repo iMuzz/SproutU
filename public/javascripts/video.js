@@ -5,10 +5,9 @@ $( document ).ready(function() {
   decreaseBalance();
 
   var video = new VideoWrap({id: "my-video", playbackRate: .5});
-  video.resumeToPercentage(.15);
+  video.resumeToPercentage(.25);
 
 });
-
 function VideoWrap (object) {
 
     this.video = document.getElementById(object["id"]);
@@ -61,59 +60,21 @@ function VideoWrap (object) {
     };
     this.init();
 
-    this.rewind = function() {
+    this.rewindToSeconds = function(seconds) {
       var video = this.video;
       var currTime = this.video.currentTime * 100 | 0;
+      var seconds = seconds * 100 | 0;
       function frame() {
         currTime-=5;
         video.currentTime = currTime / 100;
         console.log(video.currentTime)
 
-        if (currTime <= 0)  // check finish condition
+        if (currTime <= seconds)  // check finish condition
           clearInterval(id)
       };
 
       var id = setInterval(frame, 50) // draw every 50ms
     };
-};
-
-function playVideoToPercentage(percentage) {
-    addEndAttributeTime(5 * percentage)    // stop at 4 seconds
-    var video = document.getElementById("my-video");
-    var starttime = video.currentTime;  // start at 2 seconds
-    video.defaultPlaybackRate = .5;
-
-    //handler should be bound first
-    video.addEventListener("timeupdate", pauseAtTime);
-
-    video.load();
-
-    video.play(); 
-    try {
-        video.currentTime = starttime;
-    } catch (ex) {
-        //handle exceptions here
-    }
-}
-
-function pauseAtTime(){
-  var video = document.getElementById("my-video");
-  var endtime = getEndTime();
-
-  if (video.currentTime >= endtime) {
-      video.pause();
-      video.removeEventListener("timeupdate", pauseAtTime);
-  }
-};
-
-function addEndAttributeTime(value){
-  var video = document.getElementById("my-video");
-  $(video).attr('data-end-time', value);
-};
-
-function getEndTime(){
-  var video = document.getElementById("my-video");
-  return parseFloat($(video).attr('data-end-time'));  
 };
 
 
@@ -167,3 +128,42 @@ function rewind() {
   }
   var id = setInterval(frame, 25) // draw every 10ms
 }
+
+// function playVideoToPercentage(percentage) {
+//     addEndAttributeTime(5 * percentage)    // stop at 4 seconds
+//     var video = document.getElementById("my-video");
+//     var starttime = video.currentTime;  // start at 2 seconds
+//     video.defaultPlaybackRate = .5;
+
+//     //handler should be bound first
+//     video.addEventListener("timeupdate", pauseAtTime);
+
+//     video.load();
+
+//     video.play(); 
+//     try {
+//         video.currentTime = starttime;
+//     } catch (ex) {
+//         //handle exceptions here
+//     }
+// }
+
+// function pauseAtTime(){
+//   var video = document.getElementById("my-video");
+//   var endtime = getEndTime();
+
+//   if (video.currentTime >= endtime) {
+//       video.pause();
+//       video.removeEventListener("timeupdate", pauseAtTime);
+//   }
+// };
+
+// function addEndAttributeTime(value){
+//   var video = document.getElementById("my-video");
+//   $(video).attr('data-end-time', value);
+// };
+
+// function getEndTime(){
+//   var video = document.getElementById("my-video");
+//   return parseFloat($(video).attr('data-end-time'));  
+// };
