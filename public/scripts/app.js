@@ -1,1 +1,4 @@
-var app = angular.module("creditDash", []);
+(function(){
+	var app = angular.module("creditDash", []);}
+
+})();
