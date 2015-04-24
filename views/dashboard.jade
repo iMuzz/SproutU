@@ -1,0 +1,163 @@
+extends layout
+
+block content
+	.container
+		.row.two
+			.logo-container 
+				img#logo(src="images/SprouTu.png")
+			#right-wrapper
+				h4: i Welcome Julia!
+				.summary-data
+					.col-md-3.category
+						p Total Loans
+						h4#loan-balance 19852
+					.col-md-3.category
+						p Payments
+						h4 10
+					.col-md-3.category
+						p Inquiries
+						h4 3
+					.col-md-3.category
+						p Open Accounts
+						h4 8
+		br
+		.row.two#botttom
+			.tree_wrapper
+				h4 Your Credit Score
+				.tree
+					.credit_info.clearfix
+						.credit_score#score: span.vcenter#cscore 0
+						.credit_score.credit_change
+							span.vcenter#csinc 0
+							span.last-credit-check since 3/15/15
+					.goals-overlay
+						h4 Your Goal
+					.icon-load-wheel
+					video#my-video(src="/videos/tree.mp4")
+			.right_wrapper.clearfix
+				.col-md-12.zero-pad
+					h4 Your Personalized Dashboard
+					.dashboard
+						.tabgroup
+							.tab1.active
+								span Credit Cards
+								span.icon-optimization.hidden-md
+							.tab2
+								span Home Loans
+								span.icon-optimization.hidden-md
+							.tab3
+								span Business Loans
+								span.icon-optimization.hidden-md
+							.tab4
+								span Personal Loans
+								span.icon-optimization.hidden-md
+							.tab5
+								span Student Loans
+								span.icon-optimization.hidden-md
+						.content-group
+							.dash-content1.active
+								.col-md-4
+									.credit-card-wrapper
+										p British Airways
+										img.credit-card(src='media/Chase-British-Airways-Visa-Credit-Card.jpg')
+										p Balance: $4512
+										.details-button.orange Account Details
+								.col-md-4
+									.credit-card-wrapper
+										p CitiBusiness
+										img.credit-card(src='media/citibusiness-world-mastercard-credit-card1.jpg')
+										p Balance: $2905
+										.details-button.orange Account Details
+								.col-md-4
+									.credit-card-wrapper
+										p Discover it
+										img.credit-card(src='media/card-art-silver.png')
+										p 8.9% APR
+										.details-button.green Apply Now
+							.dash-content2
+							.dash-content3
+							.dash-content4
+							.dash-content5
+				//- .content
+				.col-md-12.zero-pad
+					br
+					h4 Growth Simulator
+					.growth-plan
+						br
+						.row
+							.col-md-3
+								.growth-option.green
+									.CRATE
+										p CLOSE OLDEST
+										p CREDIT CARD
+							.col-md-3
+								.growth-option.yellow
+									.CRATE
+										p ADD NEW
+										p AUTO LOAN
+							.col-md-3
+								.growth-option.orange
+									.CRATE
+										p ADD NEW
+										p MORTGAGE
+							.col-md-3
+								.growth-option.blue
+									.CRATE
+										p ADD
+										p PUBLIC RECORD
+						br
+						.row
+							.col-md-3
+								.growth-option.orange.click-target
+									.CRATE
+										p PAY OFF ALL
+										p CREDIT CARDS
+							.col-md-3
+								.growth-option.blue
+									.CRATE
+										p PAY BILLS
+										p ON TIME
+							.col-md-3
+								.growth-option.green
+									.CRATE
+										p INCREASE
+										p CREDIT LIMIT
+							.col-md-3
+								.growth-option.yellow
+									.CRATE
+										p INCREASE
+										p BALANCE
+										P ON CREDIT LIMIT
+						.row.toggle
+							.col-md-12
+								.info-alert
+									.icon-credit-card
+									p By paying off all credit card balances, you can increase your score by 35 points.
+								button.btn.btn-info(type="button" value="Reset") Reset
+
+
+				.col-md-12.zero-pad
+					br
+					h4 Your Credit History
+					.your-timeline
+						img(src='media/Graph.png')
+				.col-md-12.zero-pad
+					br
+					h4 Planner
+					ul.your-planner
+						h4 Hi Julia, let's set a plan to grow! Here's some things we noticed:
+						li.growth-crate.icon-circle-open
+							h4 You missed a few payments on your Chase Account in the last year.
+							p By paying on time, you can avoid penalties and improve your score by up to 30 points!
+							a(href="http://www.chase.com") Visit your Chase account now 
+							span to set up automatic payments or deadline reminders.
+						li.growth-crate.icon-circle-open
+							h4 You have a good credit history on your US Bank FlexPerks line.
+							p You should apply for an increased credit limit. A higher limit on this card will boost your credit score.
+							a(href="http://www.usbank.com") Visit your US Bank Account to apply for an increased credit limit.
+
+
+
+
+
+
