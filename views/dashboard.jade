@@ -157,8 +157,8 @@ block content
 							a(href="http://www.usbank.com") Visit your US Bank Account to apply for an increased credit limit.
 				.template
 					div(ng-controller="ScoreController as score")
-						h1 
-							{{ score.test.name }}			
+						h1(ng-repeat="card in score.cards") 
+							{{ card.bankName }}			
 
 
 

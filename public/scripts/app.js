@@ -2,13 +2,20 @@
 	var app = angular.module('creditDash', []);
 
 	app.controller('ScoreController', function(){
-		this.test = test;
-		console.log("This is just to see if it works")
+		this.cards = creditCards;
 	});
 
-	var test = {
-		name: 'Faraaz',
-		price: 3.0,
-		description: "Hey this should be the description"
-	}
+	var creditCards = [{
+		bankName: "British Airways",
+		image: "",
+		balance: 4512
+	}, {
+		bankName: "Citi Business",
+		image: "",
+		balance: 2905
+	}, {
+		bankName: "Bank Of America",
+		image: "",
+		balance: 3471
+	}]
 })();
