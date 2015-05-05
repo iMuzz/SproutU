@@ -155,27 +155,23 @@ block content
 							h4 You have a good credit history on your US Bank FlexPerks line.
 							p You should apply for an increased credit limit. A higher limit on this card will boost your credit score.
 							a(href="http://www.usbank.com") Visit your US Bank Account to apply for an increased credit limit.
-				.template
-					div(ng-controller="ScoreController as score")
-						h1(ng-repeat="card in score.cards") 
-							{{ card.bankName }}			
 				.col-md-12.zero-pad
 					h4 Your Personalized Dashboard
 					.dashboard(ng-controller="DashController as dash")
 						.tabgroup
-							.tab1(ng-click="dash.tab = 1" ng-class="{ active:dash.tab === 1}")
+							.tab1(ng-click="dash.selectTab(1)" ng-class="{ active:dash.isSelected(1)}")
 								span Credit Cards
 								span.icon-optimization.hidden-md
-							.tab2(ng-click="tab = 2" ng-class="{ active:tab === 2}")
+							.tab2(ng-click="dash.selectTab(2)" ng-class="{ active:dash.isSelected(2)}")
 								span Home Loans
 								span.icon-optimization.hidden-md
-							.tab3(ng-click="tab = 3" ng-class="{ active:tab === 3}")
+							.tab3(ng-click="dash.selectTab(3)" ng-class="{ active:dash.isSelected(3)}")
 								span Business Loans
 								span.icon-optimization.hidden-md
-							.tab4(ng-click="tab = 4" ng-class="{ active:tab === 4}")
+							.tab4(ng-click="dash.selectTab(4)" ng-class="{ active:dash.isSelected(4)}")
 								span Personal Loans
 								span.icon-optimization.hidden-md
-							.tab5(ng-click="tab = 5" ng-class="{ active:tab === 5}")
+							.tab5(ng-click="dash.selectTab(5)" ng-class="{ active:dash.isSelected(5)}")
 								span Student Loans
 								span.icon-optimization.hidden-md
 						.content-group
@@ -198,11 +194,10 @@ block content
 										img.credit-card(src='media/card-art-silver.png')
 										p 8.9% APR
 										.details-button.green Apply Now
-							.dash-content2(ng-show="tab === 2" ng-class="{ active:tab === 2}")
-							.dash-content3(ng-show="tab === 3" ng-class="{ active:tab === 3}")
-							.dash-content4(ng-show="tab === 4" ng-class="{ active:tab === 4}")
-							.dash-content5(ng-show="tab === 5" ng-class="{ active:tab === 5}")
-						{{ dash.tab }}
+							.dash-content2(ng-show="dash.isSelected(2)" ng-class="{ active:dash.isSelected(2)}")
+							.dash-content3(ng-show="dash.isSelected(3)" ng-class="{ active:dash.isSelected(3)}")
+							.dash-content4(ng-show="dash.isSelected(4)" ng-class="{ active:dash.isSelected(4)}")
+							.dash-content5(ng-show="dash.isSelected(5)" ng-class="{ active:dash.isSelected(5)}")
 
 
 
