@@ -5,6 +5,10 @@
 		this.cards = creditCards;
 	});
 
+	app.controller('DashController', function(){
+		this.tab = 1;
+	});
+
 	var creditCards = [{
 		bankName: "British Airways",
 		image: "",

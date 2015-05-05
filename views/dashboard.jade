@@ -159,8 +159,50 @@ block content
 					div(ng-controller="ScoreController as score")
 						h1(ng-repeat="card in score.cards") 
 							{{ card.bankName }}			
-
-
+				.col-md-12.zero-pad
+					h4 Your Personalized Dashboard
+					.dashboard(ng-controller="DashController as dash")
+						.tabgroup
+							.tab1(ng-click="dash.tab = 1" ng-class="{ active:dash.tab === 1}")
+								span Credit Cards
+								span.icon-optimization.hidden-md
+							.tab2(ng-click="tab = 2" ng-class="{ active:tab === 2}")
+								span Home Loans
+								span.icon-optimization.hidden-md
+							.tab3(ng-click="tab = 3" ng-class="{ active:tab === 3}")
+								span Business Loans
+								span.icon-optimization.hidden-md
+							.tab4(ng-click="tab = 4" ng-class="{ active:tab === 4}")
+								span Personal Loans
+								span.icon-optimization.hidden-md
+							.tab5(ng-click="tab = 5" ng-class="{ active:tab === 5}")
+								span Student Loans
+								span.icon-optimization.hidden-md
+						.content-group
+							.dash-content1(ng-show="dash.tab === 1" ng-class="{ active:dash.tab === 1}")
+								.col-md-4
+									.credit-card-wrapper
+										p British Airways
+										img.credit-card(src='media/Chase-British-Airways-Visa-Credit-Card.jpg')
+										p Balance: $4512
+										.details-button.orange Account Details
+								.col-md-4
+									.credit-card-wrapper
+										p CitiBusiness
+										img.credit-card(src='media/citibusiness-world-mastercard-credit-card1.jpg')
+										p Balance: $2905
+										.details-button.orange Account Details
+								.col-md-4
+									.credit-card-wrapper
+										p Discover it
+										img.credit-card(src='media/card-art-silver.png')
+										p 8.9% APR
+										.details-button.green Apply Now
+							.dash-content2(ng-show="tab === 2" ng-class="{ active:tab === 2}")
+							.dash-content3(ng-show="tab === 3" ng-class="{ active:tab === 3}")
+							.dash-content4(ng-show="tab === 4" ng-class="{ active:tab === 4}")
+							.dash-content5(ng-show="tab === 5" ng-class="{ active:tab === 5}")
+						{{ dash.tab }}
 
 
 

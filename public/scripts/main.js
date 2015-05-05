@@ -18,40 +18,40 @@ function removeAllContent() {
 
 $(document).ready(function(){
 
-	$('.tab1').click(function(){
-		removeAllContent();
+	// $('.tab1').click(function(){
+	// 	removeAllContent();
 
-		$('.dash-content1').addClass('active');
-		$('.tab1').addClass('active');
-	});
+	// 	$('.dash-content1').addClass('active');
+	// 	$('.tab1').addClass('active');
+	// });
 
-	$('.tab2').click(function(){
-		removeAllContent();
+	// $('.tab2').click(function(){
+	// 	removeAllContent();
 
-		$('.dash-content2').addClass('active');
-		$('.tab2').addClass('active');
-	});
+	// 	$('.dash-content2').addClass('active');
+	// 	$('.tab2').addClass('active');
+	// });
 
-	$('.tab3').click(function(){
-		removeAllContent();
+	// $('.tab3').click(function(){
+	// 	removeAllContent();
 
-		$('.dash-content3').addClass('active');
-		$('.tab3').addClass('active');
-	});
+	// 	$('.dash-content3').addClass('active');
+	// 	$('.tab3').addClass('active');
+	// });
 
-	$('.tab4').click(function(){
-		removeAllContent();
+	// $('.tab4').click(function(){
+	// 	removeAllContent();
 
-		$('.dash-content4').addClass('active');
-		$('.tab4').addClass('active');
-	});
+	// 	$('.dash-content4').addClass('active');
+	// 	$('.tab4').addClass('active');
+	// });
 
-	$('.tab5').click(function(){
-		removeAllContent();
+	// $('.tab5').click(function(){
+	// 	removeAllContent();
 
-		$('.dash-content5').addClass('active');
-		$('.tab5').addClass('active');
-	});
+	// 	$('.dash-content5').addClass('active');
+	// 	$('.tab5').addClass('active');
+	// });
 
 	$('.click-target').click(function(){
 		$('.toggle').slideToggle();
